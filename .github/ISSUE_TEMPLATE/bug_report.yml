@@ -1,39 +1,103 @@
----
-name: Bug Report
-description: Please fill out the following template to help us fix any issues you're facing with Logs – Digital Wellbeing.
-labels: [bug]
----
+name: "Bug report"
+description: "Report something that isn’t working in Logs (Windows app or browser extension)."
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve **Logs – Digital Wellbeing**. Please include as much detail as you can—especially steps to reproduce.
 
-## Logs Version
+  - type: dropdown
+    id: product
+    attributes:
+      label: Where did this happen?
+      options:
+        - Windows desktop app (MSIX)
+        - Browser extension (Chrome)
+        - Browser extension (Edge)
+        - Not sure / other
+    validations:
+      required: true
 
-- [ ] Version: ______
+  - type: input
+    id: logs_version
+    attributes:
+      label: Logs version
+      description: "App/extension version (e.g., 1.4.2)."
+      placeholder: "e.g., 1.4.2"
+    validations:
+      required: true
 
-## Windows Version
+  - type: input
+    id: windows_version
+    attributes:
+      label: Windows version
+      description: "Windows version/build (e.g., Windows 11 23H2, build 22631.xxx)."
+      placeholder: "e.g., Windows 11 23H2 (22631.3007)"
+    validations:
+      required: true
 
-- [ ] Version: ______
+  - type: input
+    id: browser
+    attributes:
+      label: Browser (if applicable)
+      description: "Only if this is related to the extension."
+      placeholder: "e.g., Chrome 121 / Edge 121"
 
-## Browser (if applicable)
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: "Numbered steps help a lot."
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
 
-- [ ] Chrome /  
-- [ ] Edge /  
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: "What you thought would happen."
+    validations:
+      required: true
 
-## Steps to Reproduce
-1. 
-2. 
-3. 
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: "What actually happened (include any error text)."
+    validations:
+      required: true
 
-## Expected Behavior
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / screen recordings
+      description: "Drag-and-drop images/videos here if you can."
+      placeholder: "Attach media (optional)."
 
--  
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment details
+      description: "Anything else that might matter (settings, permissions, focus mode, sync state, etc.)."
+      value: |
+        - Install type: (MSIX / Extension)
+        - Account/sync enabled?: (Yes/No)
+        - Relevant setting(s): 
+        - Repro frequency: (Always / Sometimes / Rarely)
+        - Additional notes:
 
-## Actual Behavior
-
--  
-
-## Screenshots
-
--  
-
-## Environment
-
--  
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: "I searched existing issues to avoid duplicates."
+          required: false
+        - label: "I can reproduce this consistently (or described when it happens)."
+          required: false
