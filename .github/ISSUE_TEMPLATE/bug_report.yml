@@ -1,0 +1,39 @@
+---
+name: Bug Report
+description: Please fill out the following template to help us fix any issues you're facing with Logs – Digital Wellbeing.
+labels: [bug]
+---
+
+## Logs Version
+
+- [ ] Version: ______
+
+## Windows Version
+
+- [ ] Version: ______
+
+## Browser (if applicable)
+
+- [ ] Chrome /  
+- [ ] Edge /  
+
+## Steps to Reproduce
+1. 
+2. 
+3. 
+
+## Expected Behavior
+
+-  
+
+## Actual Behavior
+
+-  
+
+## Screenshots
+
+-  
+
+## Environment
+
+-  
